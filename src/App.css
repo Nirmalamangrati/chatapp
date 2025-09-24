@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+.chat-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  width: 25%;
+  background: #f5f6f7;
+  padding: 20px;
+  border-right: 1px solid #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chat-box {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.chat-header {
+  padding: 15px;
+  background: #1877f2;
   color: white;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: scroll;
+  background: #eceff1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-message,
+.their-message {
+  position: relative;
+  margin: 10px;
+  display: inline-block;
+}
+
+.my-message p {
+  background: #1877f2;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 15px;
+}
+
+.their-message p {
+  background: #e4e6eb;
+  padding: 8px 12px;
+  border-radius: 15px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  cursor: pointer;
+}
+
+.menu span {
+  font-size: 18px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.menu:hover .dropdown {
+  display: block;
+}
+
+.dropdown button {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background: #f0f0f0;
 }
