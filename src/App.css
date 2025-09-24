@@ -19,7 +19,7 @@
 
 .chat-header {
   padding: 15px;
-  background: #1877f2;
+  background: hsl(266, 89%, 52%);
   color: white;
   font-weight: bold;
 }
